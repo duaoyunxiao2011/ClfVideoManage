@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{75B8375A-D71B-418E-ACF5-71C634DA640C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ICameraDll</RootNamespace>
+    <AssemblyName>ICameraDll</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DShowNET">
+      <HintPath>..\DLL\DShowNET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Camera.cs" />
+    <Compile Include="CameraManage.cs" />
+    <Compile Include="DirectX\Capture\AudioCapabilities.cs" />
+    <Compile Include="DirectX\Capture\AudioSource.cs" />
+    <Compile Include="DirectX\Capture\Capture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectX\Capture\CPlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectX\Capture\CrossbarSource.cs" />
+    <Compile Include="DirectX\Capture\DeviceInUseException.cs" />
+    <Compile Include="DirectX\Capture\DirectShowPropertyPage.cs" />
+    <Compile Include="DirectX\Capture\Filter.cs" />
+    <Compile Include="DirectX\Capture\FilterCollection.cs" />
+    <Compile Include="DirectX\Capture\Filters.cs" />
+    <Compile Include="DirectX\Capture\PropertyPage.cs" />
+    <Compile Include="DirectX\Capture\PropertyPageCollection.cs" />
+    <Compile Include="DirectX\Capture\Source.cs" />
+    <Compile Include="DirectX\Capture\SourceCollection.cs" />
+    <Compile Include="DirectX\Capture\Tuner.cs" />
+    <Compile Include="DirectX\Capture\TunerInputType.cs" />
+    <Compile Include="DirectX\Capture\VfwCompressorPropertyPage.cs" />
+    <Compile Include="DirectX\Capture\VideoCapabilities.cs" />
+    <Compile Include="ICamera.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
